@@ -5,7 +5,7 @@ function Products() {
 
   useEffect(() => {
     // Fetch data from server
-    fetch('http://0.0.0.0:8090/products')
+    fetch('http://209.38.238.249:8090/products')
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.log(error));
@@ -27,7 +27,7 @@ function Payments(){
 
   useEffect(() => {
     // Fetch data from server
-    fetch('http://0.0.0.0:8090/api/payments')
+    fetch('http://209.38.238.249:8090/api/payments')
       .then(response => response.json())
       .then(data => setPayments(data))
       .catch(error => console.log(error));
@@ -55,7 +55,7 @@ function Payment() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Send data to server
-    fetch('http://0.0.0.0:8090/api/payment', {
+    fetch('http://209.38.238.249:8090/api/payment', {
       method: 'POST',
       body: JSON.stringify(paymentData),
       headers: { 'Content-Type': 'application/json' }
